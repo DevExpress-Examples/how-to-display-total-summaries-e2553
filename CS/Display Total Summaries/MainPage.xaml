@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="Display_Total_Summaries.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:data="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid">
+    <Grid>
+        <dxg:GridControl x:Name="grid" AutoPopulateColumns="True">
+            <dxg:GridControl.TotalSummary>
+                <dxg:GridSummaryItem FieldName="UserName" SummaryType="Count"
+                                      DisplayFormat="Total Users: {0}"/>
+                <dxg:GridSummaryItem FieldName="Age" SummaryType="Min"/>
+                <dxg:GridSummaryItem FieldName="Age" SummaryType="Max"/>
+            </dxg:GridControl.TotalSummary>
+            <dxg:GridControl.View>
+                <dxg:TableView AutoWidth="True" ShowTotalSummary="True" />
+            </dxg:GridControl.View>
+        </dxg:GridControl>
+    </Grid>
+</UserControl>
